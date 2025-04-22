@@ -11,14 +11,14 @@ This project is hugely inspired by [THE BIBITES](https://www.thebibites.com/?v=0
 - [x] Basic random generated neural network for Blobs to control their behavior
 - [x] Basic reproduction and mutation of Blobs
 - [x] Basic UI to visualize the simulation
-- [] More and different inputs and outputs for each Blob
-- [] More complex neural network architecture
-- [] Hervivore and carnivore Blobs
-- [] Better reproduction and mutation of Blobs
-- [] Energy consumption based on movement, brain usage, size...
-- [] Better identification of Blobs generations
-- [] Better UI to visualize the simulation
-- [] Save and load simulation state
-- [] Save Blobs
-- [] Statistics and graphs to analyze the simulation
-- [] Visualize the Brain of each Blob
+- [ ] More and different inputs and outputs for each Blob
+- [ ] More complex neural network architecture
+- [ ] Hervivore and carnivore Blobs
+- [ ] Better reproduction and mutation of Blobs
+- [ ] Energy consumption based on movement, brain usage, size...
+- [ ] Better identification of Blobs generations
+- [ ] Better UI to visualize the simulation
+- [ ] Save and load simulation state
+- [ ] Save Blobs
+- [ ] Statistics and graphs to analyze the simulation
+- [ ] Visualize the Brain of each Blob
