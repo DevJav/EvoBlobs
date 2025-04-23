@@ -24,21 +24,21 @@ class Brain:
         number_of_inputs = len(self.inputs)
         number_of_outputs = len(self.outputs)
         number_of_hidden_layers = random.randint(MIN_HIDDEN_LAYERS, MAX_HIDDEN_LAYERS)
-        neurons_per_layer = random.randint(MIN_NEURONS_PER_LAYER, MAX_NEURONS_PER_LAYER)
 
         self.hidden_layers = []
 
-        # Primera capa oculta: conecta con los inputs
-        first_hidden = [Neuron(number_of_inputs) for _ in range(neurons_per_layer)]
+        neurons_first = random.randint(MIN_NEURONS_PER_LAYER, MAX_NEURONS_PER_LAYER)
+        first_hidden = [Neuron(number_of_inputs) for _ in range(neurons_first)]
         self.hidden_layers.append(first_hidden)
+        previous_neurons = neurons_first
 
-        # Capas ocultas intermedias: conectan entre sí
         for _ in range(1, number_of_hidden_layers):
-            hidden = [Neuron(neurons_per_layer) for _ in range(neurons_per_layer)]
+            neurons_this_layer = random.randint(MIN_NEURONS_PER_LAYER, MAX_NEURONS_PER_LAYER)
+            hidden = [Neuron(previous_neurons) for _ in range(neurons_this_layer)]
             self.hidden_layers.append(hidden)
+            previous_neurons = neurons_this_layer
 
-        # Capa de salida: conecta con la última oculta
-        self.output_layer = [Neuron(neurons_per_layer) for _ in range(number_of_outputs)]
+        self.output_layer = [Neuron(previous_neurons) for _ in range(number_of_outputs)]
 
         self.plot_brain()
 
